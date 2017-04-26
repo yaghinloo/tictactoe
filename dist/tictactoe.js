@@ -130,7 +130,58 @@ var TicTacToe = function () {
     }, {
         key: 'checkforwinner',
         value: function checkforwinner() {
+            var _this2 = this;
 
+            var winnerMessage = 'no one wins';
+            var checkforwin = function checkforwin(win) {
+                var winner = true;
+                for (var x = 0; x < _this2.gameSize; x++) {
+                    var colwinner = true;
+                    for (var y = 0; y < _this2.gameSize; y++) {
+
+                        if (_this2.state[x][y] !== win) colwinner = false;
+                    }
+                    if (colwinner == true) return true;
+                }
+                for (var _x3 = 0; _x3 < _this2.gameSize; _x3++) {
+                    var rowwinner = true;
+                    for (var _y = 0; _y < _this2.gameSize; _y++) {
+
+                        if (_this2.state[_y][_x3] !== win) rowwinner = false;
+                    }
+                    if (rowwinner == true) return true;
+                }
+
+                var diag1winner = true;
+                for (var _x4 = 0; _x4 < _this2.gameSize; _x4++) {
+                    if (_this2.state[_x4][_x4] !== win) diag1winner = false;
+                }
+                if (diag1winner == true) return true;
+
+                var diag2winner = true;
+                for (var _x5 = 0; _x5 < _this2.gameSize; _x5++) {
+                    if (_this2.state[_this2.gameSize - _x5 - 1][_x5] !== win) diag2winner = false;
+                }
+                if (diag2winner == true) return true;
+
+                return false;
+            };
+            var xIswinner = checkforwin(1);
+            var oIswinner = checkforwin(2);
+
+            console.log('x is winner', xIswinner);
+            console.log('o is winner', oIswinner);
+            if (xIswinner && oIswinner) {
+                winnerMessage = ' both are winners ';
+            } else {
+                if (xIswinner) {
+                    winnerMessage = ' x in winner';
+                }
+                if (oIswinner) {
+                    winnerMessage = ' o is winner';
+                }
+            }
+            document.getElementById('tictactoe_msg-winner').innerHTML = winnerMessage;
             // winner logic goes here
             console.log('winner logic is still pending');
         }

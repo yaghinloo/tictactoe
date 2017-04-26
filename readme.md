@@ -3,7 +3,8 @@
 by Hadi Yaghinloo
 
 please open the tictactoe.html file in a browser and have fun.
-the logic to determine the winer is not implemented in this version
+
+ the logic can handle a game with any given size. so far, this version is 3x3
 
 the ES6 js file is in src folder. to let the code working on all browsers
 I have added a simple build to transpile the ES6 code.
