@@ -1,0 +1,54 @@
+#tictactoe {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    display: block;
+    font-size: 300%;
+}
+
+#tictactoe_msg-winner {
+    text-align: center;
+    font-size: large;
+
+}
+.tictactoe_cell {
+    display: inline-block;
+    border:1px solid grey;
+    margin: 1%;
+    width: 30%;
+    height: 30%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    box-shadow: 0  0  10px rgba(5,5,200,0);
+    transition: box-shadow 300ms;
+}
+.tictactoe_cell:hover {
+    box-shadow: 0  0  10px rgba(5,5,200,.6);
+}
+.tictactoe_cell:active {
+    box-shadow: 0  0  10px rgba(250,5,200,.6);
+}
+#tictactoe_msg{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px;
+}
+.tictactoe_cell-state {
+    line-height: 0;
+    margin-top: 50%;
+}
+.author {
+    text-align: center;
+    clear: both;
+}
+@media screen and (max-device-width: 1024px){
+    #tictactoe {
+        width: 100%;
+
+    }
+    .tictactoe_cell {
+        width: 30vw;
+        height: 30vw;
+    }
+}

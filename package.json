@@ -1,0 +1,15 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "simeple tic tac toe",
+  "scripts": {
+    "build":"babel ./src/tictactoe.js --out-file ./dist/tictactoe.js --presets=es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hadi Yaghinloo",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
