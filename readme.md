@@ -2,7 +2,7 @@
 
 by Hadi Yaghinloo
 
-please open the tictactoe.html file in a browser and have fun.
+please open the index.html file in a browser and have fun.
 
  the logic can handle a game with any given size. so far, this version is 3x3
 
