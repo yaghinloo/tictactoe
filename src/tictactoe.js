@@ -103,6 +103,8 @@ class TicTacToe {
     }
 
     checkforwinner() {
+
+        // winner logic goes here
         let winnerMessage = 'no one wins';
         const checkforwin = (win) => {
             let winner = true;
@@ -156,8 +158,8 @@ class TicTacToe {
 
         }
         document.getElementById('tictactoe_msg-winner').innerHTML = winnerMessage;
-        // winner logic goes here
-        console.log('winner logic is still pending');
+
+
     }
 
 }
