@@ -148,10 +148,10 @@ class TicTacToe {
             winnerMessage = ' both are winners ';
         } else {
             if (xIswinner) {
-                winnerMessage = ' x in winner';
+                winnerMessage = ' X is winner';
             }
             if (oIswinner) {
-                winnerMessage = ' o is winner'
+                winnerMessage = ' O is winner'
             }
 
         }
