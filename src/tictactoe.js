@@ -25,6 +25,7 @@ class TicTacToe {
     // fill the game area with given setup
     createBoard() {
         let outputStr = ``;
+        document.getElementById('tictactoe_msg-winner').innerHTML = 'Do your best. You can win!';
         const cellFactory = (x, y) => `<div style=" " class ='tictactoe_cell' data-x="${x}" data-y="${y}"></div> `;
         for (let x = 0; x < this.gameSize; x++)
             for (let y = 0; y < this.gameSize; y++)

@@ -42,6 +42,7 @@ var TicTacToe = function () {
         key: 'createBoard',
         value: function createBoard() {
             var outputStr = '';
+            document.getElementById('tictactoe_msg-winner').innerHTML = 'Do your best. You can win!';
             var cellFactory = function cellFactory(x, y) {
                 return '<div style=" " class =\'tictactoe_cell\' data-x="' + x + '" data-y="' + y + '"></div> ';
             };
@@ -132,6 +133,7 @@ var TicTacToe = function () {
         value: function checkforwinner() {
             var _this2 = this;
 
+            // winner logic goes here
             var winnerMessage = 'no one wins';
             var checkforwin = function checkforwin(win) {
                 var winner = true;
@@ -175,15 +177,13 @@ var TicTacToe = function () {
                 winnerMessage = ' both are winners ';
             } else {
                 if (xIswinner) {
-                    winnerMessage = ' x in winner';
+                    winnerMessage = ' X is winner';
                 }
                 if (oIswinner) {
-                    winnerMessage = ' o is winner';
+                    winnerMessage = ' O is winner';
                 }
             }
             document.getElementById('tictactoe_msg-winner').innerHTML = winnerMessage;
-            // winner logic goes here
-            console.log('winner logic is still pending');
         }
     }]);
 
